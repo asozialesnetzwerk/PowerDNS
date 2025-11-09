@@ -55,7 +55,7 @@ jobs:
     name: Check only images built from tags and master are pushed
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: recursive
@@ -75,7 +75,7 @@ jobs:
     outputs:
       image-digest: ${{ steps.build-image.outputs.digest }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: recursive
