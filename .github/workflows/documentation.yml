@@ -166,7 +166,7 @@ jobs:
           fi
       - name: Install Netlify
         run: npm install netlify-cli@17.36.3 -g
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           path: artifacts
 
@@ -228,7 +228,7 @@ jobs:
         with:
           persist-credentials: false
       - run: build-scripts/gh-actions-setup-inv-no-dist-upgrade
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           path: artifacts
       - id: setup-ssh
@@ -300,7 +300,7 @@ jobs:
           region = $AWS_REGION
           EOF
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           path: artifacts
       - name: Publish to AWS
